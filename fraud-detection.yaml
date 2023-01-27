@@ -184,7 +184,7 @@ channels:
                 name: UpdatedFraudEvent
                 topicSubscriptions:
                 - person/*/updated
-                - person/*/YOLO
+                - person/*/deleted
       message:
         $ref: "#/components/messages/Fraud"
     parameters:
@@ -207,11 +207,7 @@ info:
   x-ep-application-version: "0.1.1"
   x-ep-application-version-id: "xm9q7x23edp"
   x-ep-application-id: "qflupgaf84t"
-  description: "Updated third time Commercial off-the-shelf (COTS) Point of Sale (PoS) system that serves\
-    \ checkout areas for all stores within acme-retail.   Receives Product events\
-    \ from supply chain management domain to allow for price updates and restrictions\
-    \ on purchases.  Emits Retail Order events that allow for analytics and supply\
-    \ chain management decisions."
+  description: "Detects Fraud for retail customers"
   x-ep-state-name: "RELEASED"
   title: "Fraud Detection Solace"
   x-ep-application-domain-id: "actei0226a6"
