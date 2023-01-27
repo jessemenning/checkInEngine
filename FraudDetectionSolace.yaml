@@ -319,7 +319,7 @@ info:
   x-ep-application-version: "0.1.0"
   x-ep-application-version-id: "m15t431vqyf"
   x-ep-application-id: "yamj8qcj786"
-  description: "Solace Version of Fraud application"
+  description: "Solace Version of Fraud application x"
   x-ep-state-name: "DRAFT"
   title: "Fraud Detection Solace"
   x-ep-application-domain-id: "l5fqd9g6o45"
