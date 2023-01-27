@@ -202,12 +202,12 @@ channels:
           x-ep-parameter-name: "fraudId"
 
 asyncapi: "2.5.0"
-x-ep-application-domain-name: "Demo Account-Demo Account-ACME Bank"
+x-ep-application-domain-name: "Demo Account-ACME Bank"
 info:
   x-ep-application-version: "0.1.1"
   x-ep-application-version-id: "xm9q7x23edp"
   x-ep-application-id: "qflupgaf84t"
-  description: "Detects Fraud for retail customer"
+  description: "Detects Fraud for retail customers"
   x-ep-state-name: "RELEASED"
   title: "Fraud Detection Solace"
   x-ep-application-domain-id: "actei0226a6"
