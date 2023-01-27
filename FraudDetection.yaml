@@ -1,0 +1,267 @@
+---
+components:
+  schemas:
+    Transaction:
+      x-ep-schema-version: "0.1.0"
+      x-ep-schema-version-id: "khhgdw04ku7"
+      $schema: "https://json-schema.org/draft/2019-09/schema"
+      description: "A transaction conducted by an account."
+      x-ep-schema-state-name: "RELEASED"
+      x-ep-schema-name: "Transaction"
+      title: "Transaction"
+      type: "object"
+      required:
+      - "transactionNum"
+      - "accountNum"
+      - "transactionType"
+      - "amount"
+      - "currency"
+      - "timestamp"
+      x-ep-schema-version-displayname: "0.1.0"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-id: "o238euveshs"
+      properties:
+        transactionType:
+          description: "The transaction type."
+          type: "string"
+        amount:
+          description: "The transaction amount."
+          type: "number"
+        transactionNum:
+          description: "The unique identifier of the transaction."
+          type: "integer"
+        accountNum:
+          description: "The unique identifer of an account."
+          type: "integer"
+        currency:
+          description: "The currency of the transaction."
+          type: "string"
+        timestamp:
+          description: "The time stamp of the event."
+          type: "string"
+      $id: "https://example.com/transaction.schema.json"
+    Transfer:
+      x-ep-schema-version: "0.1.0"
+      x-ep-schema-version-id: "0fqhiui57ww"
+      $schema: "https://json-schema.org/draft/2019-09/schema"
+      description: "A transfer conducted by an account."
+      x-ep-schema-state-name: "RELEASED"
+      x-ep-schema-name: "Transfer"
+      title: "Transfer"
+      type: "object"
+      required:
+      - "transactionNum"
+      - "sourceAccountNum"
+      - "targetAccountNum"
+      - "transactionType"
+      - "amount"
+      - "currency"
+      - "transferDateTime"
+      - "timestamp"
+      x-ep-schema-version-displayname: "0.1.0"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-id: "i1cj9g5fni8"
+      properties:
+        transactionType:
+          description: "The transaction type."
+          type: "string"
+        amount:
+          description: "The transaction amount."
+          type: "number"
+        transactionNum:
+          description: "The unique identifier of the transaction."
+          type: "integer"
+        targetAccountNum:
+          description: "The unique identifer of the source account."
+          type: "integer"
+        sourceAccountNum:
+          description: "The unique identifer of the source account."
+          type: "integer"
+        currency:
+          description: "The currency of the transaction."
+          type: "string"
+        transferDateTime:
+          description: "When should the transfer be done."
+          type: "string"
+        timestamp:
+          description: "The time stamp of the event."
+          type: "string"
+      $id: "https://example.com/transfer.schema.json"
+    FraudDetected:
+      x-ep-schema-version: "0.1.0"
+      x-ep-schema-version-id: "ldgpts0ia16"
+      $schema: "https://json-schema.org/draft/2019-09/schema"
+      description: "A detected possible fraud."
+      x-ep-schema-state-name: "RELEASED"
+      x-ep-schema-name: "FraudDetected"
+      title: "Fraud Detected"
+      type: "object"
+      required:
+      - "transactionNum"
+      - "accountNum"
+      - "transactionType"
+      - "amount"
+      - "currency"
+      - "incidentDescription"
+      - "incidentTimestamp"
+      - "timestamp"
+      x-ep-schema-version-displayname: "0.1.0"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-id: "zt9hv890rck"
+      properties:
+        transactionType:
+          description: "The transaction type."
+          type: "string"
+        amount:
+          description: "The transaction amount."
+          type: "number"
+        incidentTimestamp:
+          description: "When the alleged incident took place."
+          type: "string"
+        transactionNum:
+          description: "The unique identifier of the transaction."
+          type: "integer"
+        accountNum:
+          description: "The unique identifer of an account."
+          type: "integer"
+        detectionNum:
+          description: "The unique identifier of the possible fraud detected."
+          type: "integer"
+        currency:
+          description: "The currency of the transaction."
+          type: "string"
+        incidentDescription:
+          description: "The description of the possible fraud."
+          type: "string"
+        timestamp:
+          description: "The time stamp of the event."
+          type: "string"
+      $id: "https://example.com/fraud-detected.schema.json"
+  messages:
+    PayCreditCard:
+      x-ep-event-id: "77m3ooq1e20"
+      x-ep-event-version-displayname: "0.1.0"
+      x-ep-event-version-id: "2h47wbuzbt6"
+      payload:
+        $ref: "#/components/schemas/Transaction"
+      x-ep-event-version: "0.1.1"
+      x-ep-event-name: "PayCreditCard"
+      description: "Payment issued by an account holder."
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    Deposit:
+      x-ep-event-id: "7exjlz459w8"
+      x-ep-event-version-displayname: "0.1.0"
+      x-ep-event-version-id: "gjxdcfox633"
+      payload:
+        $ref: "#/components/schemas/Transaction"
+      x-ep-event-version: "0.1.1"
+      x-ep-event-name: "Deposit"
+      description: "Deposit made either via ATM, teller, mobile, or electronic transfer."
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    Withdrawal:
+      x-ep-event-id: "dp5v4fa93cw"
+      x-ep-event-version-displayname: "0.1.0"
+      x-ep-event-version-id: "qxsudgtes94"
+      payload:
+        $ref: "#/components/schemas/Transaction"
+      x-ep-event-version: "0.1.1"
+      x-ep-event-name: "Withdrawal"
+      description: "Account holder withdraws from an account."
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    Transfer:
+      x-ep-event-id: "yhg8lfog0hc"
+      x-ep-event-version-displayname: "0.1.0"
+      x-ep-event-version-id: "9s5gvz8uonk"
+      payload:
+        $ref: "#/components/schemas/Transfer"
+      x-ep-event-version: "0.1.1"
+      x-ep-event-name: "Transfer"
+      description: "Transfering money between two accounts of the same holder."
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    FraudDetected:
+      x-ep-event-id: "5nwc4zxc6qx"
+      x-ep-event-version-displayname: "0.1.0"
+      x-ep-event-version-id: "9w08h2i9ibd"
+      payload:
+        $ref: "#/components/schemas/FraudDetected"
+      x-ep-event-version: "0.1.0"
+      x-ep-event-name: "FraudDetected"
+      description: "Possible fraudulent activity detected."
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+channels:
+  acmebank.core.deposit:
+    publish:
+      bindings:
+        kafka:
+          clientId:
+            type: "string"
+            enum:
+            - "acmebank.core.deposit"
+          bindingVersion: "0.3.0"
+      message:
+        $ref: "#/components/messages/Deposit"
+  acmebank.core.payment.creditcard:
+    publish:
+      bindings:
+        kafka:
+          clientId:
+            type: "string"
+            enum:
+            - "acmebank.core.payment.creditcard"
+          bindingVersion: "0.3.0"
+      message:
+        $ref: "#/components/messages/PayCreditCard"
+  acmebank.fraud.detect.validate:
+    subscribe:
+      message:
+        $ref: "#/components/messages/FraudDetected"
+  acmebank.core.transfer:
+    publish:
+      bindings:
+        kafka:
+          clientId:
+            type: "string"
+            enum:
+            - "acmebank.core.transfer"
+          bindingVersion: "0.3.0"
+      message:
+        $ref: "#/components/messages/Transfer"
+  acmebank.core.withdrawal:
+    publish:
+      bindings:
+        kafka:
+          clientId:
+            type: "string"
+            enum:
+            - "acmebank.core.withdrawal"
+          bindingVersion: "0.3.0"
+      message:
+        $ref: "#/components/messages/Withdrawal"
+asyncapi: "2.5.0"
+info:
+  x-ep-application-version: "0.1.2"
+  x-ep-application-version-id: "q423ac98a0q"
+  x-ep-application-id: "lrana15zr88"
+  description: "Application for supporting fraud detection."
+  x-ep-displayname: "0.1.0"
+  x-ep-state-name: "RELEASED"
+  title: "Fraud Detection"
+  x-ep-application-domain-id: "9cof5la03yl"
+  version: "0.1.2"
+  x-ep-state-id: "2"
+  x-ep-application-domain-name: "Demo Account-Demo Account-ACME Bank"
