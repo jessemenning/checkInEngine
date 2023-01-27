@@ -202,7 +202,7 @@ channels:
           x-ep-parameter-name: "fraudId"
 
 asyncapi: "2.5.0"
-x-ep-application-domain-name: "TempRetail - Store Operation"
+x-ep-application-domain-name: "Demo Account-Demo Account-ACME Bank"
 info:
   x-ep-application-version: "0.1.1"
   x-ep-application-version-id: "xm9q7x23edp"
@@ -213,7 +213,7 @@ info:
     \ on purchases.  Emits Retail Order events that allow for analytics and supply\
     \ chain management decisions."
   x-ep-state-name: "RELEASED"
-  title: "Point of Sale System"
+  title: "Fraud Detection Solace"
   x-ep-application-domain-id: "actei0226a6"
   version: "0.1.1"
   x-ep-state-id: "2"
