@@ -1,3 +1,3 @@
-# Fraud Detection
+# Check in Engine
 
-Data analytics engine used to detect fraudulant transactions and raise alerts.
+Allows passengers to check in for flights
