@@ -1,3 +1,4 @@
-# Check in Engine
+# Point of Sale
 
-Allows passengers to check in for flights
+
+Used in stores for checkout.
