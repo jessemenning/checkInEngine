@@ -273,7 +273,7 @@ channels:
           type: "string"
         x-ep-parameter-name: "flightStatus"
   myair/checkIn/v1/{flightNo}/{noOfPax}/{noOfBaggage}:
-    x-ep-event-name: "flightStatus"
+    x-ep-event-name: "loadControl"
     subscribe:
       message:
         $ref: "#/components/messages/loadControl"
