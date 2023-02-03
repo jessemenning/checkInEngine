@@ -331,7 +331,7 @@ channels:
           type: "string"
         x-ep-parameter-name: "arrival"
   myair/checkIn/v1/{flightNo}/{noOfPax}:
-    x-ep-event-name: "flightStatus"
+    x-ep-event-name: "lounge"
     subscribe:
       message:
         $ref: "#/components/messages/lounge"
