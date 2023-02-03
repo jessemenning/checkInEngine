@@ -1,4 +1,4 @@
-# Point of Sale
+# CheckIn Engine
 
 
-Used in stores for checkout.
+Coordinates checkin for both in-person and online passenger check in.
