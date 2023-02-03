@@ -1,0 +1,359 @@
+---
+components:
+  schemas:
+    flightInfo:
+      x-ep-schema-version: "0.1.0"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-version-id: "ot9eznduljm"
+      $schema: "http://json-schema.org/draft-07/schema#"
+      x-ep-schema-id: "7raq1kucbo4"
+      x-ep-schema-state-name: "RELEASED"
+      x-ep-schema-name: "flightInfo"
+      title: "Generated schema for Root"
+      type: "object"
+      properties:
+        beltNo:
+          type: "string"
+        flightNo:
+          type: "number"
+        newDepartureTime:
+          type: "string"
+        flightStatus:
+          type: "string"
+        newGate:
+          type: "string"
+      required:
+      - "flightNo"
+      - "flightStatus"
+      x-ep-schema-version-displayname: ""
+    loadControlJson:
+      x-ep-schema-version: "0.1.0"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-version-id: "81ki7giut6g"
+      $schema: "http://json-schema.org/draft-07/schema#"
+      x-ep-schema-id: "sp913w7ag40"
+      x-ep-schema-state-name: "RELEASED"
+      x-ep-schema-name: "loadControlJson"
+      title: "Generated schema for Root"
+      type: "object"
+      properties:
+        flightNo:
+          type: "string"
+        noOfBaggage:
+          type: "number"
+        noOfPax:
+          type: "number"
+      required:
+      - "flightNo"
+      - "noOfPax"
+      - "noOfBaggage"
+      x-ep-schema-version-displayname: ""
+    bookingInfo:
+      x-ep-schema-version: "0.1.0"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-version-id: "om7umqg1inn"
+      $schema: "http://json-schema.org/draft-07/schema#"
+      x-ep-schema-id: "jhbdx89cvor"
+      x-ep-schema-state-name: "RELEASED"
+      x-ep-schema-name: "bookingInfo"
+      title: "Generated schema for Root"
+      type: "object"
+      properties:
+        date:
+          type: "number"
+        flightNo:
+          type: "string"
+        PNR:
+          type: "string"
+        arrival:
+          type: "string"
+        class:
+          type: "number"
+        dep:
+          type: "string"
+      required:
+      - "PNR"
+      - "flightNo"
+      - "dep"
+      - "arrival"
+      - "date"
+      - "class"
+      x-ep-schema-version-displayname: ""
+    passengerInfo:
+      x-ep-schema-version: "0.1.0"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-version-id: "k7avxe4lddp"
+      $schema: "http://json-schema.org/draft-07/schema#"
+      x-ep-schema-id: "xk42i1qgmhj"
+      x-ep-schema-state-name: "RELEASED"
+      x-ep-schema-name: "passengerInfo"
+      title: "Generated schema for Root"
+      type: "object"
+      properties:
+        passengerAction:
+          type: "string"
+        destination:
+          type: "string"
+        passengerId:
+          type: "number"
+        tripId:
+          type: "string"
+        vipStatus:
+          type: "string"
+      required:
+      - "passengerId"
+      - "tripId"
+      - "passengerAction"
+      - "destination"
+      - "vipStatus"
+      x-ep-schema-version-displayname: ""
+  messages:
+    loadControl:
+      x-ep-event-id: "2j62xckcs3e"
+      x-ep-event-version-displayname: ""
+      x-ep-event-version-id: "rgwspe0ejz5"
+      payload:
+        $ref: "#/components/schemas/loadControlJson"
+      x-ep-event-version: "0.1.0"
+      x-ep-event-name: "loadControl"
+      description: ""
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    cancelledBooking:
+      x-ep-event-id: "6eb2z1pg0l9"
+      x-ep-event-version-displayname: ""
+      x-ep-event-version-id: "vb4x8hukigp"
+      payload:
+        $ref: "#/components/schemas/bookingInfo"
+      x-ep-event-version: "0.1.0"
+      x-ep-event-name: "cancelledBooking"
+      description: ""
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    lounge:
+      x-ep-event-id: "21ohqj5in8o"
+      x-ep-event-version-displayname: ""
+      x-ep-event-version-id: "7frtly73jsi"
+      payload:
+        $ref: "#/components/schemas/passengerInfo"
+      x-ep-event-version: "0.1.0"
+      x-ep-event-name: "lounge"
+      description: ""
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    foreignImmigration:
+      x-ep-event-id: "65g4jj81r1d"
+      x-ep-event-version-displayname: ""
+      x-ep-event-version-id: "kcigd2cy6nc"
+      payload:
+        $ref: "#/components/schemas/passengerInfo"
+      x-ep-event-version: "0.1.0"
+      x-ep-event-name: "foreignImmigration"
+      description: ""
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    newDepartureTime:
+      x-ep-event-id: "98c4duu8tcl"
+      x-ep-event-version-displayname: ""
+      x-ep-event-version-id: "hsmwpwijwhg"
+      payload:
+        $ref: "#/components/schemas/flightInfo"
+      x-ep-event-version: "0.1.0"
+      x-ep-event-name: "newDepartureTime"
+      description: ""
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    flightStatus:
+      x-ep-event-id: "o2rxgsipp5t"
+      x-ep-event-version-displayname: ""
+      x-ep-event-version-id: "hwpwigwktkp"
+      payload:
+        $ref: "#/components/schemas/flightInfo"
+      x-ep-event-version: "0.1.0"
+      x-ep-event-name: "flightStatus"
+      description: ""
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+    bookingDetails:
+      x-ep-event-id: "8t20e7w0id5"
+      x-ep-event-version-displayname: ""
+      x-ep-event-version-id: "juh0t15cw8f"
+      payload:
+        $ref: "#/components/schemas/bookingInfo"
+      x-ep-event-version: "0.1.0"
+      x-ep-event-name: "bookingDetails"
+      description: ""
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      contentType: "application/json"
+      x-ep-event-state-id: "2"
+      x-ep-event-state-name: "RELEASED"
+channels:
+  myair/reservation/bookingCancelled/v1/{PNR}:
+    x-ep-event-name: "cancelledBooking"
+    publish:
+      bindings:
+        solace:
+          destinations:
+          - destinationType: "queue"
+            queue:
+              name: "checkIn.checkInEngine.bookingCancelled"
+              topicSubscriptions:
+              - "myair/reservation/bookingCancelled/v1/*"
+          bindingVersion: "0.3.0"
+      message:
+        $ref: "#/components/messages/cancelledBooking"
+    parameters:
+      PNR:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "PNR"
+  myair/reservation/bookingCreated/v1/{PNR}/{flightNo}/{dep}/{arrival}/{date}/{class}:
+    x-ep-event-name: "bookingDetails"
+    publish:
+      bindings:
+        solace:
+          destinations:
+          - destinationType: "queue"
+            queue:
+              name: "checkIn.checkInEngine.bookingCreated"
+              topicSubscriptions:
+              - "myair/reservation/bookingCreated/v1/*/*/*/*/*/*"
+          bindingVersion: "0.3.0"
+      message:
+        $ref: "#/components/messages/bookingDetails"
+    parameters:
+      date:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "date"
+      flightNo:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "flightNo"
+      PNR:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "PNR"
+      arrival:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "arrival"
+      class:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "class"
+      dep:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "dep"
+  myair/checkIn/v1/{flightNo}/{flightStatus}:
+    x-ep-event-name: "flightStatus"
+    subscribe:
+      message:
+        $ref: "#/components/messages/flightStatus"
+    parameters:
+      flightNo:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "flightNo"
+      flightStatus:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "flightStatus"
+  myair/checkIn/v1/{flightNo}/{noOfPax}/{noOfBaggage}:
+    x-ep-event-name: "loadControl"
+    subscribe:
+      message:
+        $ref: "#/components/messages/loadControl"
+    parameters:
+      flightNo:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "flightNo"
+      noOfBaggage:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "noOfBaggage"
+      noOfPax:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "noOfPax"
+  myair/checkIn/v1/{flightNo}/{newDepartureTime}:
+    x-ep-event-name: "newDepartureTime"
+    subscribe:
+      message:
+        $ref: "#/components/messages/newDepartureTime"
+    parameters:
+      flightNo:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "flightNo"
+      newDepartureTime:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "newDepartureTime"
+  myair/checkIn/v1/{passportNo}/{firstName}/{lastName}/{flightNo}/{arrival}:
+    x-ep-event-name: "foreignImmigration"
+    subscribe:
+      message:
+        $ref: "#/components/messages/foreignImmigration"
+    parameters:
+      passportNo:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "passportNo"
+      firstName:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "firstName"
+      lastName:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "lastName"
+      flightNo:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "flightNo"
+      arrival:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "arrival"
+  myair/checkIn/v1/{flightNo}/{noOfPax}:
+    x-ep-event-name: "lounge"
+    subscribe:
+      message:
+        $ref: "#/components/messages/lounge"
+    parameters:
+      flightNo:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "flightNo"
+      noOfPax:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "noOfPax"
+asyncapi: "2.5.0"
+info:
+  x-ep-application-version: "1.0.1"
+  x-ep-application-version-id: "se6ag6pygdz"
+  x-ep-application-id: "hmqkcd02y57"
+  description: "Enabled gate agents, ticket agents and website to assist customers\
+    \ with check in."
+  x-ep-state-name: "RELEASED"
+  title: "checkInEngine"
+  x-ep-application-domain-id: "q6esjbisnyp"
+  version: "1.0.1"
+  x-ep-state-id: "2"
+  x-ep-application-domain-name: "Jane Smith-checkIn"
