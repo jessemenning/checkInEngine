@@ -350,7 +350,7 @@ info:
   x-ep-application-version-id: "se6ag6pygdz"
   x-ep-application-id: "hmqkcd02y57"
   description: "Enables gate agents, ticket agents and website to assist customers\
-    \ with check in and troubleshoot."
+    \ with check in and troubleshoot various issues."
   x-ep-state-name: "RELEASED"
   title: "checkInEngine"
   x-ep-application-domain-id: "q6esjbisnyp"
