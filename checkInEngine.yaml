@@ -349,7 +349,7 @@ info:
   x-ep-application-version: "1.0.1"
   x-ep-application-version-id: "se6ag6pygdz"
   x-ep-application-id: "hmqkcd02y57"
-  description: "Enables gate agents, ticket agents and website to assist customers\
+  description: "Enables gate agents, ticket agents, mobile apps and websites to assist customers\
     \ with check in and troubleshoot various issues."
   x-ep-state-name: "RELEASED"
   title: "checkInEngine"
