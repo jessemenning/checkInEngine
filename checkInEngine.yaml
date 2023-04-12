@@ -1,16 +1,48 @@
 ---
 components:
   schemas:
+    loadControlJson:
+      x-ep-schema-version: "0.1.0"
+      x-ep-schema-version-id: "923sg7u8br6"
+      $schema: "http://json-schema.org/draft-07/schema#"
+      x-ep-schema-state-name: "RELEASED"
+      x-ep-schema-name: "loadControlJson"
+      title: "Generated schema for Root"
+      type: "object"
+      x-ep-application-domain-id: "lklqzndqczz"
+      required:
+      - "flightNo"
+      - "noOfPax"
+      - "noOfBaggage"
+      x-ep-schema-version-displayname: ""
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-id: "nl09ek9z1lt"
+      properties:
+        flightNo:
+          type: "string"
+        noOfBaggage:
+          type: "number"
+        noOfPax:
+          type: "number"
     flightInfo:
       x-ep-schema-version: "0.1.0"
-      x-ep-schema-state-id: "2"
-      x-ep-schema-version-id: "ot9eznduljm"
+      x-ep-schema-version-id: "0ev88yh6n39"
       $schema: "http://json-schema.org/draft-07/schema#"
-      x-ep-schema-id: "7raq1kucbo4"
       x-ep-schema-state-name: "RELEASED"
       x-ep-schema-name: "flightInfo"
       title: "Generated schema for Root"
       type: "object"
+      x-ep-application-domain-id: "lklqzndqczz"
+      required:
+      - "flightNo"
+      - "flightStatus"
+      x-ep-schema-version-displayname: ""
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-id: "0y42owzq6fb"
       properties:
         beltNo:
           type: "string"
@@ -22,42 +54,27 @@ components:
           type: "string"
         newGate:
           type: "string"
-      required:
-      - "flightNo"
-      - "flightStatus"
-      x-ep-schema-version-displayname: ""
-    loadControlJson:
-      x-ep-schema-version: "0.1.0"
-      x-ep-schema-state-id: "2"
-      x-ep-schema-version-id: "81ki7giut6g"
-      $schema: "http://json-schema.org/draft-07/schema#"
-      x-ep-schema-id: "sp913w7ag40"
-      x-ep-schema-state-name: "RELEASED"
-      x-ep-schema-name: "loadControlJson"
-      title: "Generated schema for Root"
-      type: "object"
-      properties:
-        flightNo:
-          type: "string"
-        noOfBaggage:
-          type: "number"
-        noOfPax:
-          type: "number"
-      required:
-      - "flightNo"
-      - "noOfPax"
-      - "noOfBaggage"
-      x-ep-schema-version-displayname: ""
     bookingInfo:
       x-ep-schema-version: "0.1.0"
-      x-ep-schema-state-id: "2"
-      x-ep-schema-version-id: "om7umqg1inn"
+      x-ep-schema-version-id: "h16m9wq7sqb"
       $schema: "http://json-schema.org/draft-07/schema#"
-      x-ep-schema-id: "jhbdx89cvor"
       x-ep-schema-state-name: "RELEASED"
       x-ep-schema-name: "bookingInfo"
       title: "Generated schema for Root"
       type: "object"
+      x-ep-application-domain-id: "lklqzndqczz"
+      required:
+      - "PNR"
+      - "flightNo"
+      - "dep"
+      - "arrival"
+      - "date"
+      - "class"
+      x-ep-schema-version-displayname: ""
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-id: "43u0azig0ul"
       properties:
         date:
           type: "number"
@@ -71,24 +88,26 @@ components:
           type: "number"
         dep:
           type: "string"
-      required:
-      - "PNR"
-      - "flightNo"
-      - "dep"
-      - "arrival"
-      - "date"
-      - "class"
-      x-ep-schema-version-displayname: ""
     passengerInfo:
       x-ep-schema-version: "0.1.0"
-      x-ep-schema-state-id: "2"
-      x-ep-schema-version-id: "k7avxe4lddp"
+      x-ep-schema-version-id: "2939eob4xhd"
       $schema: "http://json-schema.org/draft-07/schema#"
-      x-ep-schema-id: "xk42i1qgmhj"
       x-ep-schema-state-name: "RELEASED"
       x-ep-schema-name: "passengerInfo"
       title: "Generated schema for Root"
       type: "object"
+      x-ep-application-domain-id: "lklqzndqczz"
+      required:
+      - "passengerId"
+      - "tripId"
+      - "passengerAction"
+      - "destination"
+      - "vipStatus"
+      x-ep-schema-version-displayname: ""
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-schema-state-id: "2"
+      x-ep-schema-id: "o02q46tx34f"
       properties:
         passengerAction:
           type: "string"
@@ -100,108 +119,121 @@ components:
           type: "string"
         vipStatus:
           type: "string"
-      required:
-      - "passengerId"
-      - "tripId"
-      - "passengerAction"
-      - "destination"
-      - "vipStatus"
-      x-ep-schema-version-displayname: ""
   messages:
     loadControl:
-      x-ep-event-id: "2j62xckcs3e"
+      x-ep-event-id: "37rvcdipoh6"
       x-ep-event-version-displayname: ""
-      x-ep-event-version-id: "rgwspe0ejz5"
+      description: ""
+      x-ep-application-domain-id: "lklqzndqczz"
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      x-ep-event-state-name: "RELEASED"
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-event-version-id: "3avlorw04ch"
       payload:
         $ref: "#/components/schemas/loadControlJson"
       x-ep-event-version: "0.1.0"
       x-ep-event-name: "loadControl"
-      description: ""
-      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
       contentType: "application/json"
       x-ep-event-state-id: "2"
-      x-ep-event-state-name: "RELEASED"
     cancelledBooking:
-      x-ep-event-id: "6eb2z1pg0l9"
+      x-ep-event-id: "asgoycnh0it"
       x-ep-event-version-displayname: ""
-      x-ep-event-version-id: "vb4x8hukigp"
+      description: ""
+      x-ep-application-domain-id: "lklqzndqczz"
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      x-ep-event-state-name: "RELEASED"
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-event-version-id: "6y2dsnot9tf"
       payload:
         $ref: "#/components/schemas/bookingInfo"
       x-ep-event-version: "0.1.0"
       x-ep-event-name: "cancelledBooking"
-      description: ""
-      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
       contentType: "application/json"
       x-ep-event-state-id: "2"
-      x-ep-event-state-name: "RELEASED"
     lounge:
-      x-ep-event-id: "21ohqj5in8o"
+      x-ep-event-id: "q0de9b6z4v7"
       x-ep-event-version-displayname: ""
-      x-ep-event-version-id: "7frtly73jsi"
+      description: ""
+      x-ep-application-domain-id: "lklqzndqczz"
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      x-ep-event-state-name: "RELEASED"
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-event-version-id: "st3a05c466f"
       payload:
         $ref: "#/components/schemas/passengerInfo"
       x-ep-event-version: "0.1.0"
       x-ep-event-name: "lounge"
-      description: ""
-      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
       contentType: "application/json"
       x-ep-event-state-id: "2"
-      x-ep-event-state-name: "RELEASED"
     foreignImmigration:
-      x-ep-event-id: "65g4jj81r1d"
+      x-ep-event-id: "jtq9fvjubyi"
       x-ep-event-version-displayname: ""
-      x-ep-event-version-id: "kcigd2cy6nc"
+      description: ""
+      x-ep-application-domain-id: "lklqzndqczz"
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      x-ep-event-state-name: "RELEASED"
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-event-version-id: "23ak57pyypv"
       payload:
         $ref: "#/components/schemas/passengerInfo"
       x-ep-event-version: "0.1.0"
       x-ep-event-name: "foreignImmigration"
-      description: ""
-      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
       contentType: "application/json"
       x-ep-event-state-id: "2"
-      x-ep-event-state-name: "RELEASED"
     newDepartureTime:
-      x-ep-event-id: "98c4duu8tcl"
+      x-ep-event-id: "e247ebcnf1t"
       x-ep-event-version-displayname: ""
-      x-ep-event-version-id: "hsmwpwijwhg"
+      description: ""
+      x-ep-application-domain-id: "lklqzndqczz"
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      x-ep-event-state-name: "RELEASED"
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-event-version-id: "5imrar164lq"
       payload:
         $ref: "#/components/schemas/flightInfo"
       x-ep-event-version: "0.1.0"
       x-ep-event-name: "newDepartureTime"
-      description: ""
-      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
       contentType: "application/json"
       x-ep-event-state-id: "2"
-      x-ep-event-state-name: "RELEASED"
     flightStatus:
-      x-ep-event-id: "o2rxgsipp5t"
+      x-ep-event-id: "nr7aje2l1at"
       x-ep-event-version-displayname: ""
-      x-ep-event-version-id: "hwpwigwktkp"
+      description: ""
+      x-ep-application-domain-id: "lklqzndqczz"
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      x-ep-event-state-name: "RELEASED"
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-event-version-id: "r0g06idi2fu"
       payload:
         $ref: "#/components/schemas/flightInfo"
       x-ep-event-version: "0.1.0"
       x-ep-event-name: "flightStatus"
-      description: ""
-      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
       contentType: "application/json"
       x-ep-event-state-id: "2"
-      x-ep-event-state-name: "RELEASED"
     bookingDetails:
-      x-ep-event-id: "8t20e7w0id5"
+      x-ep-event-id: "85q12hz7hkh"
       x-ep-event-version-displayname: ""
-      x-ep-event-version-id: "juh0t15cw8f"
+      description: ""
+      x-ep-application-domain-id: "lklqzndqczz"
+      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
+      x-ep-event-state-name: "RELEASED"
+      x-ep-shared: "true"
+      x-ep-application-domain-name: "Additional Student1-checkIn"
+      x-ep-event-version-id: "wjjfh3w2git"
       payload:
         $ref: "#/components/schemas/bookingInfo"
       x-ep-event-version: "0.1.0"
       x-ep-event-name: "bookingDetails"
-      description: ""
-      schemaFormat: "application/vnd.aai.asyncapi+json;version=2.0.0"
       contentType: "application/json"
       x-ep-event-state-id: "2"
-      x-ep-event-state-name: "RELEASED"
 channels:
   myair/reservation/bookingCancelled/v1/{PNR}:
-    x-ep-event-name: "cancelledBooking"
     publish:
       bindings:
         solace:
@@ -220,7 +252,6 @@ channels:
           type: "string"
         x-ep-parameter-name: "PNR"
   myair/reservation/bookingCreated/v1/{PNR}/{flightNo}/{dep}/{arrival}/{date}/{class}:
-    x-ep-event-name: "bookingDetails"
     publish:
       bindings:
         solace:
@@ -258,22 +289,7 @@ channels:
         schema:
           type: "string"
         x-ep-parameter-name: "dep"
-  myair/checkIn/v1/{flightNo}/{flightStatus}:
-    x-ep-event-name: "flightStatus"
-    subscribe:
-      message:
-        $ref: "#/components/messages/flightStatus"
-    parameters:
-      flightNo:
-        schema:
-          type: "string"
-        x-ep-parameter-name: "flightNo"
-      flightStatus:
-        schema:
-          type: "string"
-        x-ep-parameter-name: "flightStatus"
   myair/checkIn/v1/{flightNo}/{noOfPax}/{noOfBaggage}:
-    x-ep-event-name: "loadControl"
     subscribe:
       message:
         $ref: "#/components/messages/loadControl"
@@ -290,22 +306,20 @@ channels:
         schema:
           type: "string"
         x-ep-parameter-name: "noOfPax"
-  myair/checkIn/v1/{flightNo}/{newDepartureTime}:
-    x-ep-event-name: "newDepartureTime"
+  myair/checkIn/v1/{flightNo}/{flightStatus}:
     subscribe:
       message:
-        $ref: "#/components/messages/newDepartureTime"
+        $ref: "#/components/messages/flightStatus"
     parameters:
       flightNo:
         schema:
           type: "string"
         x-ep-parameter-name: "flightNo"
-      newDepartureTime:
+      flightStatus:
         schema:
           type: "string"
-        x-ep-parameter-name: "newDepartureTime"
+        x-ep-parameter-name: "flightStatus"
   myair/checkIn/v1/{passportNo}/{firstName}/{lastName}/{flightNo}/{arrival}:
-    x-ep-event-name: "foreignImmigration"
     subscribe:
       message:
         $ref: "#/components/messages/foreignImmigration"
@@ -330,8 +344,20 @@ channels:
         schema:
           type: "string"
         x-ep-parameter-name: "arrival"
+  myair/checkIn/v1/{flightNo}/{newDepartureTime}:
+    subscribe:
+      message:
+        $ref: "#/components/messages/newDepartureTime"
+    parameters:
+      flightNo:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "flightNo"
+      newDepartureTime:
+        schema:
+          type: "string"
+        x-ep-parameter-name: "newDepartureTime"
   myair/checkIn/v1/{flightNo}/{noOfPax}:
-    x-ep-event-name: "lounge"
     subscribe:
       message:
         $ref: "#/components/messages/lounge"
@@ -346,14 +372,14 @@ channels:
         x-ep-parameter-name: "noOfPax"
 asyncapi: "2.5.0"
 info:
-  x-ep-application-version: "1.0.1"
-  x-ep-application-version-id: "se6ag6pygdz"
-  x-ep-application-id: "hmqkcd02y57"
-  description: "CHECK THIS OUT Enables gate agents, ticket agents, mobile apps and websites to assist customers\
-    \ with check in and troubleshoot various issues."
+  x-ep-application-version: "1.0.3"
+  x-ep-application-version-id: "dxbaiag55pm"
+  x-ep-application-id: "gbcmb3g14p3"
+  description: "Enables gate agents, ticket agents, airline website and mobile application\
+    \ to assist customers with check in. CHECK"
   x-ep-state-name: "RELEASED"
   title: "checkInEngine"
-  x-ep-application-domain-id: "q6esjbisnyp"
-  version: "1.0.1"
+  x-ep-application-domain-id: "lklqzndqczz"
+  version: "1.0.3"
   x-ep-state-id: "2"
-  x-ep-application-domain-name: "Jane Smith-checkIn"
+  x-ep-application-domain-name: "Additional Student1-checkIn"
